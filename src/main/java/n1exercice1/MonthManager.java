@@ -10,7 +10,7 @@ public class MonthManager {
 
     public void createCalendar() {
 
-        Month January = new Month("January-coladepescao");
+        Month January = new Month("January");
         Month February = new Month("February");
         Month March = new Month("March");
         Month April = new Month("April");
