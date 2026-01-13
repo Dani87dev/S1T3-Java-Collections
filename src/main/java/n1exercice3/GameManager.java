@@ -27,8 +27,8 @@ public class GameManager {
                 }
 
                 String[] documentParts = line.split("\\s+");
-                String countryPart = documentParts[0];
-                String capitalPart = documentParts[1];
+                String countryPart = documentParts[0].replace("_", " ");
+                String capitalPart = documentParts[1].replace("_", " ");
 
                 countries.put(countryPart, capitalPart);
             }
