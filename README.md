@@ -33,7 +33,7 @@ This exercise focuses on practicing the use of `ListIterator`, particularly its 
 
 ---
 
-TASK 3 — LEVEL 1
+## TASK 3 — LEVEL 1
 📌 Exercise Statement
 
 Exercise 3 — Capital Game
