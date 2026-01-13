@@ -1,21 +1,29 @@
 package n1exercice2;
 
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 
 public class Main {
     public static void main(String[] args) {
 
-        /*
+        List<Integer> list1 = new ArrayList<>();
+        list1.add(1);
+        list1.add(2);
+        list1.add(3);
+        list1.add(4);
+        list1.add(5);
 
-        List<Integer> lista1 = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
-        List<Integer> lista2 = new ArrayList<>();
+        List<Integer> list2 = new ArrayList<>();
 
-        ListIterator<Integer> it = lista1.listIterator(lista1.size());
+        ListIterator<Integer> iterator = list1.listIterator(list1.size());
 
-        while (it.hasPrevious()) {
-            lista2.add(it.previous());
+        while (iterator.hasPrevious()) {
+            list2.add(iterator.previous());
         }
 
-         */
+        System.out.println(list1);
+        System.out.println(list2);
     }
 }
