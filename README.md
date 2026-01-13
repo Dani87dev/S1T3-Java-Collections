@@ -33,6 +33,23 @@ This exercise focuses on practicing the use of `ListIterator`, particularly its 
 
 ---
 
+TASK 3 — LEVEL 1
+📌 Exercise Statement
+
+Exercise 3 — Capital Game
+
+Read the file countries.txt and store the country–capital pairs in a HashMap.
+
+Ask the user for their name.
+
+Randomly select 10 different countries.
+
+Ask the user for the capital of each country and calculate the score.
+
+Display the final score and save the user name and score in classificacio.txt.
+
+---
+
 ## 🛠 Technologies
 
 - Java: 21 (LTS)
