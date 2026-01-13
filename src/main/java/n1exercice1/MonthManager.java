@@ -1,39 +1,51 @@
 package n1exercice1;
 
 import java.util.ArrayList;
-
+import java.util.List;
 
 
 public class MonthManager {
 
-    static ArrayList<Month> calendar = new ArrayList<Month>();
+    private List<Month> calendar = new ArrayList<>();
+
+    public List<Month> getCalendar() {
+        return calendar;
+    }
+
 
     public void createCalendar() {
 
-        Month January = new Month("January");
-        Month February = new Month("February");
-        Month March = new Month("March");
-        Month April = new Month("April");
-        Month May = new Month("May");
-        Month June = new Month("June");
-        Month July = new Month("July");
-        Month September = new Month("September");
-        Month October = new Month("October");
-        Month November = new Month("November");
-        Month December = new Month("December");
+        Month january = new Month("January");
+        Month february = new Month("February");
+        Month march = new Month("March");
+        Month april = new Month("April");
+        Month may = new Month("May");
+        Month june = new Month("June");
+        Month july = new Month("July");
+        Month september = new Month("September");
+        Month october = new Month("October");
+        Month november = new Month("November");
+        Month december = new Month("December");
 
-        calendar.add(January);
-        calendar.add(February);
-        calendar.add(March);
-        calendar.add(April);
-        calendar.add(May);
-        calendar.add(June);
-        calendar.add(July);
-        calendar.add(September);
-        calendar.add(October);
-        calendar.add(November);
-        calendar.add(December);
+        calendar.add(january);
+        calendar.add(february);
+        calendar.add(march);
+        calendar.add(april);
+        calendar.add(may);
+        calendar.add(june);
+        calendar.add(july);
+        calendar.add(september);
+        calendar.add(october);
+        calendar.add(november);
+        calendar.add(december);
     }
+
+    public void addOneMonth(String name, int position) {
+        Month month = new Month(name);
+        calendar.add(position, month);
+    }
+
+
 }
 
 

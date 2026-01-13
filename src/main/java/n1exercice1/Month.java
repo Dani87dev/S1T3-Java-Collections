@@ -11,8 +11,20 @@ public class Month {
     public String getName() {
         return this.name;
     }
-    public void setName(String name) {
-        this.name = name;
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Month month = (Month) o;
+        return name.equals(month.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return this.name.hashCode();
     }
 
     @Override
