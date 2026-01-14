@@ -14,12 +14,16 @@ public class Month {
 
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null || getClass() != obj.getClass()) {
+            return false;
+        }
 
-        Month month = (Month) o;
-        return name.equals(month.name);
+        Month month = (Month) obj;
+        return this.name.equals(month.name);
     }
 
     @Override
