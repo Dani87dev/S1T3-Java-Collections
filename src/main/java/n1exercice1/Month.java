@@ -2,14 +2,14 @@ package n1exercice1;
 
 public class Month {
 
-    private String name;
+    private final String NAME;
 
     public Month(String name) {
-        this.name = name;
+        this.NAME = name;
     }
 
     public String getName() {
-        return this.name;
+        return this.NAME;
     }
 
 
@@ -23,16 +23,16 @@ public class Month {
         }
 
         Month month = (Month) obj;
-        return this.name.equals(month.name);
+        return this.NAME.equals(month.NAME);
     }
 
     @Override
     public int hashCode() {
-        return this.name.hashCode();
+        return this.NAME.hashCode();
     }
 
     @Override
     public String toString() {
-        return this.name;
+        return this.NAME;
     }
 }

@@ -8,14 +8,14 @@ import java.util.*;
 
 public class GameManager {
 
-    private Map<String, String> countries = new HashMap<>();
+    private final Map<String, String> COUNTRIES = new HashMap<>();
 
 
     private void loadCountries() {
 
         try {
             BufferedReader document = new BufferedReader(
-                    new InputStreamReader(getClass().getClassLoader().getResourceAsStream("countries.txt"))
+                    new InputStreamReader(Objects.requireNonNull(getClass().getClassLoader().getResourceAsStream("countries.txt")))
             );
 
             String line;
@@ -30,7 +30,7 @@ public class GameManager {
                 String countryPart = documentParts[0].replace("_", " ");
                 String capitalPart = documentParts[1].replace("_", " ");
 
-                countries.put(countryPart, capitalPart);
+                COUNTRIES.put(countryPart, capitalPart);
             }
 
         } catch (Exception e) {
@@ -40,7 +40,7 @@ public class GameManager {
     }
 
     private List<String> countryList() {
-        return new ArrayList<>(countries.keySet());
+        return new ArrayList<>(COUNTRIES.keySet());
     }
 
     private List<String> randomSelection(List<String> countryList) {
@@ -60,7 +60,7 @@ public class GameManager {
 
     public void play() {
         int score = 0;
-        String playerName = "";
+        String playerName;
         loadCountries();
         List<String> countryList = countryList();
         List<String> selectedCountries = randomSelection(countryList);
@@ -73,7 +73,7 @@ public class GameManager {
             System.out.print("Please, write the capital of " + country + ": ");
             String answer = scanner.nextLine();
 
-            String correctCapital = countries.get(country);
+            String correctCapital = COUNTRIES.get(country);
 
             if (answer.equalsIgnoreCase(correctCapital)) {
                 score++;
