@@ -39,6 +39,25 @@ public class GameManager {
 
     }
 
+    private List<String> countryList() {
+        return new ArrayList<>(countries.keySet());
+    }
+
+    private List<String> randomSelection(List<String> countryList) {
+        List<String> selectedCountries = new ArrayList<>();
+
+        while (selectedCountries.size() < 10) {
+            int index = (int) (Math.random() * countryList.size());
+            String country = countryList.get(index);
+
+            if (!selectedCountries.contains(country)) {
+                selectedCountries.add(country);
+            }
+        }
+
+        return selectedCountries;
+    }
+
     public void play() {
         int score = 0;
         String playerName = "";
@@ -70,25 +89,6 @@ public class GameManager {
 
         scanner.close();
 
-    }
-
-    private List<String> countryList() {
-        return new ArrayList<>(countries.keySet());
-    }
-
-    private List<String> randomSelection(List<String> countryList) {
-        List<String> selectedCountries = new ArrayList<>();
-
-        while (selectedCountries.size() < 10) {
-            int index = (int) (Math.random() * countryList.size());
-            String country = countryList.get(index);
-
-            if (!selectedCountries.contains(country)) {
-                selectedCountries.add(country);
-            }
-        }
-
-        return selectedCountries;
     }
 
 

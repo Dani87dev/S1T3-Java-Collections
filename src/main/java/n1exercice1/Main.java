@@ -3,6 +3,7 @@ package n1exercice1;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Set;
 
 
 public class Main {
@@ -20,7 +21,7 @@ public class Main {
         System.out.println();
 
 
-        HashSet<Month> monthSet = new HashSet<>(monthManager.getCalendar());
+        Set<Month> monthSet = new HashSet<>(monthManager.getCalendar());
 
         System.out.println("Size of monthSet is about " + monthSet.size());
         monthSet.add(new Month("August"));
