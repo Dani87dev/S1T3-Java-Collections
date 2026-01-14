@@ -28,7 +28,12 @@ public class Main {
         System.out.println("Size of monthSet is about " + monthSet.size());
         System.out.println();
 
+        System.out.println("Printing Colection with a for bucle");
+        for (Month month : monthSet) {
+            System.out.println(month);
+        }
 
+        System.out.println("\nPrinting Colection with an iterator");
         Iterator<Month> iterator = monthSet.iterator();
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
