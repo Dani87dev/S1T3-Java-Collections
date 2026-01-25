@@ -12,7 +12,7 @@ public class N1exercise3 {
         Player player = new Player(playerName);
 
         Game game = new Game(player, loader.getCountriesAsList(), console);
-        game.startGame();
+        game.play();
 
         ScoreRepository repository = new ScoreRepository();
         repository.saveScorePlayer(player);
